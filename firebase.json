@@ -10,6 +10,9 @@
   },
   "hosting": {
     "public": "public",
+    "predeploy": [
+      "cd web && npm run build && cp -r build/* ../public"
+    ],
     "ignore": [
       "firebase.json",
       "**/.*",
